@@ -63,24 +63,13 @@ public class EmpresaService {
 		if (codigo != null) {
 			try {
 				empresas.update(codigo, nome, nome_fantasia, cnpj, ie, codRegime);
-			} catch (Exception e) {
-				System.out.println(e);
-				return "Erro ao salvar dados da empresa, chame o suporte";
-			}
-
-			try {
 				parametros.update(serie, ambiente, aliqCalcCredito);
-			} catch (Exception e) {
-				System.out.println(e);
-				return "Erro ao salvar dados da empresa, chame o suporte";
-			}
-
-			try {
 				enderecos.update(codendereco, codcidade, rua, bairro, numero, cep, referencia);
 			} catch (Exception e) {
 				System.out.println(e);
 				return "Erro ao salvar dados da empresa, chame o suporte";
 			}
+
 		} else {
 			EmpresaParametro parametro = new EmpresaParametro();
 
@@ -103,18 +92,13 @@ public class EmpresaService {
 
 			try {
 				enderecos.cadastrar(endereco);
-			} catch (Exception e) {
-				System.out.println(e);
-				return "Erro ao salvar dados da empresa, chame o suporte";
-			}
-
-			try {
 				Empresa empresa = new Empresa(nome, nome_fantasia, cnpj, ie, tributario.get(), endereco, parametro);
 				empresas.save(empresa);
 			} catch (Exception e) {
 				System.out.println(e);
 				return "Erro ao salvar dados da empresa, chame o suporte";
 			}
+
 		}
 
 		return "Empresa salva com sucesso";
