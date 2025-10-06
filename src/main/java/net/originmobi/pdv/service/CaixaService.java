@@ -30,6 +30,9 @@ public class CaixaService {
 	private Usuario usuario;
 
 	@Autowired
+	private Aplicacao aplicacao;
+
+	@Autowired
 	private CaixaRepository caixas;
 
 	@Autowired
@@ -52,7 +55,7 @@ public class CaixaService {
 		if (caixa.getValor_abertura() < 0)
 			throw new RuntimeException("Valor informado é inválido");
 
-		Aplicacao aplicacao = Aplicacao.getInstancia();
+		// Aplicacao aplicacao = Aplicacao.getInstancia();
 		usuario = usuarios.buscaUsuario(aplicacao.getUsuarioAtual());
 
 		if (caixa.getTipo().equals(CaixaTipo.CAIXA))
@@ -109,7 +112,7 @@ public class CaixaService {
 
 	public String fechaCaixa(Long caixa, String senha) {
 
-		Aplicacao aplicacao = Aplicacao.getInstancia();
+		// Aplicacao aplicacao = Aplicacao.getInstancia();
 		Usuario usuario = usuarios.buscaUsuario(aplicacao.getUsuarioAtual());
 
 		BCryptPasswordEncoder decode = new BCryptPasswordEncoder();

@@ -1,4 +1,13 @@
-# pdv
+# Projeto da Disciplina de Qualidade e Teste 2025.2
+
+Este é o repositório do projeto usado para aplicação do trabalho prático da disciplina de Qualidade e Teste. Neste README estarão os links para os principais artefatos gerados para o projeto.
+
+## 1º Entrega:
+- [Plano de Testes do Projeto](https://docs.google.com/document/d/1fgIgzIyryhDrJuJulroLd96kp2agQrKBn5fH6Bf8enM/edit?usp=sharing)
+- [Resultados de exeução Testlink](https://drive.google.com/file/d/1xL7c7EXfT_h2VUo2k71meyN4QeeUlOUC/view?usp=sharing)
+- [Slides de Apresentação do Projeto](https://www.canva.com/design/DAG0_Owvf5Y/Pfw2zR69lIXSj69j5vAEbQ/edit?utm_content=DAG0_Owvf5Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+# PDV
 Sistema de ERP web desenvolvido em Java com Spring Framework 
 
 # Recursos
@@ -32,4 +41,3 @@ Para executar a aplicação utilizando o docker, utilize o seguinte comando na r
 ```sh
 docker compose up -d
 ```
-
