@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static org.mockito.Mockito.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
@@ -162,16 +163,26 @@ public class CaixaServiceTest {
         caixa.setTipo(CaixaTipo.CAIXA);
         caixaService.cadastro(caixa);
     }
-    
-    @Test
-    public void naoDeveLancarExcecaoQuandoCofreJaEstaAberto() {
-        when(caixaRepository.caixaAberto()).thenReturn(Optional.of(new Caixa()));
-        when(caixaRepository.save(any())).thenReturn(caixa);
-        caixa.setTipo(CaixaTipo.COFRE);
-        caixa.setValor_abertura(0.0);
 
-        caixaService.cadastro(caixa);
+    @Test
+    public void deveLancarExcecaoQuandoRepositorioFalharAoSalvar() {
+        when(caixaRepository.caixaAberto()).thenReturn(Optional.empty());
+
+        doThrow(new RuntimeException()).when(caixaRepository).save(any());
+
+        try {
+            caixaService.cadastro(caixa);
+            fail("Era esperada uma RuntimeException");
+        } catch (RuntimeException e) {
+            assertEquals(
+                "Erro no processo de abertura, chame o suporte técnico",
+                e.getMessage()
+            );
+        }
+
+        verify(caixaRepository).save(any());
     }
+
 
     @Test(expected = RuntimeException.class)
     public void deveLancarExcecaoQuandoValorAberturaNegativo() {
