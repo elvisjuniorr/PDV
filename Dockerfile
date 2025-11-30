@@ -1,4 +1,5 @@
-FROM openjdk:8-jdk-slim
+# FROM openjdk:8-jdk-slim
+FROM eclipse-temurin:8-jdk
 
 RUN apt-get update && apt-get install -y maven
 

@@ -1,2 +1,5 @@
 /app/src/test/java/net/originmobi/pdv/service/CaixaServiceTest.java
+/app/src/test/java/net/originmobi/pdv/selenium/PessoaTest.java
 /app/src/test/java/net/originmobi/pdv/PdvApplicationTests.java
+/app/src/test/java/net/originmobi/pdv/selenium/BaseTest.java
+/app/src/test/java/net/originmobi/pdv/selenium/FornecedorTest.java
