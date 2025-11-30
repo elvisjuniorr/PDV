@@ -110,7 +110,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- WebDriver Manager (não precisar baixar driver manualmente) -->
+		<!-- WebDriver Manager -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
@@ -118,13 +118,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- JUnit 5 -->
-		<!-- <dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>5.9.3</version>
-			<scope>test</scope>
-		</dependency> -->
  </dependencies>
 
 	<build>
@@ -141,7 +134,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.11</version> <!-- Verifique a versão mais recente -->
+				<version>0.8.11</version>
 				<executions>
 					<execution>
 						<goals>

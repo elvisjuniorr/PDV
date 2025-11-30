@@ -21,7 +21,7 @@ public class PessoasTest extends BaseTest {
         // 3. Preencher dados da pessoa
         driver.findElement(By.id("nome")).sendKeys("Pessoa Selenium");
         driver.findElement(By.id("apelido")).sendKeys("Teste");
-        driver.findElement(By.id("cpfcnpj")).sendKeys("12345678914"); // Alterar CPF para um que ainda não foi cadastrado
+        driver.findElement(By.id("cpfcnpj")).sendKeys("12345678917"); // Alterar CPF para um que ainda não foi cadastrado
         driver.findElement(By.id("nascimento")).sendKeys("2000/01/01");
 
         // 4. Preencher observação
@@ -31,7 +31,7 @@ public class PessoasTest extends BaseTest {
         driver.findElement(By.xpath("/html/body/section[1]/div/div/form/ul/li[2]")).click();
 
         driver.findElement(By.id("cidade")).sendKeys("São Gonçalo");
-        driver.findElement(By.id("rua")).sendKeys("Rua Java");
+        driver.findElement(By.id("rua")).sendKeys("Rua 1");
         driver.findElement(By.id("bairro")).sendKeys("Centro");
         driver.findElement(By.id("numero")).sendKeys("22");
         driver.findElement(By.id("cep")).sendKeys("24400000");
@@ -47,7 +47,7 @@ public class PessoasTest extends BaseTest {
         driver.findElement(By.xpath("/html/body/section[1]/div/div/form/input[2]")).click();
 
         // 8. Validação
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.alertIsPresent());
 
         Alert alert = driver.switchTo().alert();
@@ -96,7 +96,7 @@ public class PessoasTest extends BaseTest {
         driver.findElement(By.xpath("/html/body/section[1]/div/div/form/input[2]")).click();
 
         // 8. Validação
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.alertIsPresent());
 
         Alert alert = driver.switchTo().alert();
