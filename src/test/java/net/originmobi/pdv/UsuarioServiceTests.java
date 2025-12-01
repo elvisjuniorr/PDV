@@ -67,7 +67,7 @@ public class UsuarioServiceTests {
     public void testAddGrupoJaExistente() {
         usuario.getGrupoUsuario().add(grupoUsuario);
         
-        when(usuarios.findByCodigoIn(1L)).thenReturn(usuario);
+        when(usuarios.findByCodigo(1L)).thenReturn(usuario);
         when(grupos.buscaGrupo(1L)).thenReturn(grupoUsuario);
 
         String resultado = usuarioService.addGrupo(1L, 1L);
@@ -75,13 +75,13 @@ public class UsuarioServiceTests {
         assertEquals("ja existe", resultado);
         assertEquals(1, usuario.getGrupoUsuario().size());
         verify(usuarios, never()).save(any(Usuario.class));
-        verify(usuarios, times(1)).findByCodigoIn(1L);
+        verify(usuarios, times(1)).findByCodigo(1L);
         verify(grupos, times(1)).buscaGrupo(1L);
     }
 
     @Test
     public void testAddGrupoUsuarioNaoEncontrado() {
-        when(usuarios.findByCodigoIn(1L)).thenReturn(null);
+        when(usuarios.findByCodigo(1L)).thenReturn(null);
 
         try {
             usuarioService.addGrupo(1L, 1L);
@@ -89,14 +89,14 @@ public class UsuarioServiceTests {
         } catch (NullPointerException e) {
         }
 
-        verify(usuarios, times(1)).findByCodigoIn(1L);
+        verify(usuarios, times(1)).findByCodigo(1L);
         verify(grupos, never()).buscaGrupo(anyLong());
         verify(usuarios, never()).save(any(Usuario.class));
     }
 
     @Test
     public void testAddGrupoGrupoNaoEncontrado() {
-        when(usuarios.findByCodigoIn(1L)).thenReturn(usuario);
+        when(usuarios.findByCodigo(1L)).thenReturn(usuario);
         when(grupos.buscaGrupo(1L)).thenReturn(null);
 
         try {
@@ -105,7 +105,7 @@ public class UsuarioServiceTests {
         } catch (NullPointerException e) {
         }
 
-        verify(usuarios, times(1)).findByCodigoIn(1L);
+        verify(usuarios, times(1)).findByCodigo(1L);
         verify(grupos, times(1)).buscaGrupo(1L);
         verify(usuarios, never()).save(any(Usuario.class));
     }

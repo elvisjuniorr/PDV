@@ -43,7 +43,7 @@ public class LoginUserDatailsService implements UserDetailsService {
 	}
 
 	public Collection<? extends GrantedAuthority> authorities(Usuario usuario) {
-		return authorities(grupos.findByUsuarioIn(usuario));
+		return authorities(grupos.findByUsuario(usuario));
 	}
 
 	public Collection<? extends GrantedAuthority> authorities(List<GrupoUsuario> grupos) {

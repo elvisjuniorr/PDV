@@ -1,0 +1,5 @@
+net\originmobi\pdv\PdvApplicationTests.class
+net\originmobi\pdv\model\ParcelaTest.class
+net\originmobi\pdv\service\EmpresaServiceTest.class
+net\originmobi\pdv\UsuarioServiceTests.class
+net\originmobi\pdv\service\CaixaServiceTest.class

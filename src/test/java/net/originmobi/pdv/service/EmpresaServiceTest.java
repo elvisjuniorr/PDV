@@ -1,8 +1,6 @@
 package net.originmobi.pdv.service;
 
 import static org.mockito.Mockito.*;
-import static org.mockito.ArgumentMatchers.*;
-
 import java.sql.Date;
 import java.util.Optional;
 
@@ -42,7 +40,7 @@ public class EmpresaServiceTest {
 
     @Mock
     private CidadeService cidadeService;
-    
+
     private Empresa empresa;
     
     @Before

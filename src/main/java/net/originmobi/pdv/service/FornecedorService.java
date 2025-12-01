@@ -24,7 +24,7 @@ public class FornecedorService {
 		String cnpj = fornecedor.getCnpj().replaceAll("\\D", "");
 
 		if (fornecedor.getCodigo() != null) {
-			Fornecedor dadosFornecedor = fornecedores.findByCodigoIn(fornecedor.getCodigo());
+			Fornecedor dadosFornecedor = fornecedores.findByCodigo(fornecedor.getCodigo());
 
 			dadosFornecedor.getEndereco().setCidade(fornecedor.getEndereco().getCidade());
 			dadosFornecedor.getEndereco().setRua(fornecedor.getEndereco().getRua());
