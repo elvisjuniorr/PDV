@@ -10,6 +10,7 @@ Este é o repositório do projeto usado para aplicação do trabalho prático da
 ## 2º Entrega:
 - [Plano de Testes do Projeto (Final)](https://docs.google.com/document/d/1qdnpXWp8VUqscI4Ae_ZGLOTABEOiFzmzrknTNNNmiQo/edit?usp=sharing)
 - [Relatório de Inspeção Código-Fonte](https://docs.google.com/document/d/1U_yCkVsSMighyUco4tB9qBAWf4rPHTTW1YjrpALwN5s/edit?usp=sharing)
+- [Indicação das medidas de cada atributo de qualidade da ISO 25010](https://docs.google.com/document/d/12atZMQvwFSsmVnGhbqumPjXo6LRckiqzfG1a0Q6JJmE/edit?usp=sharing)
 - [Slides de Apresentação do Projeto]()
 
 ## Grupo - E.R.R.O.K:
