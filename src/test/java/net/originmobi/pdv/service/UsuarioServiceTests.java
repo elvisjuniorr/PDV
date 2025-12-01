@@ -5,7 +5,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.never;
@@ -98,9 +97,11 @@ public class UsuarioServiceTests {
     public void testAddGrupoUsuarioNull() {
         when(usuarios.findByCodigoIn(1L)).thenReturn(null);
 
-        assertThrows(NullPointerException.class, () ->
-            usuarioService.addGrupo(1L, 1L)
-        );
+        try {
+            usuarioService.addGrupo(1L, 1L);
+            assertTrue("Deveria ter lançado NullPointerException", false);
+        } catch (NullPointerException e) {
+        }
     }
 
     @Test
@@ -309,9 +310,11 @@ public class UsuarioServiceTests {
         when(usuarios.findByCodigoIn(1L)).thenReturn(usuario);
         when(grupos.buscaGrupo(1L)).thenReturn(null);
 
-        assertThrows(NullPointerException.class, () ->
-            usuarioService.removeGrupo(1L, 1L)
-        );
+        try {
+            usuarioService.removeGrupo(1L, 1L);
+            assertTrue("Deveria ter lançado NullPointerException", false);
+        } catch (NullPointerException e) {
+        }
 
         verify(usuarios).findByCodigoIn(1L);
         verify(grupos).buscaGrupo(1L);
@@ -322,9 +325,11 @@ public class UsuarioServiceTests {
     public void testRemoveGrupoUsuarioIdNull() {
         when(usuarios.findByCodigoIn(null)).thenReturn(null);
 
-        assertThrows(NullPointerException.class, () ->
-            usuarioService.removeGrupo(null, 1L)
-        );
+        try {
+            usuarioService.removeGrupo(null, 1L);
+            assertTrue("Deveria ter lançado NullPointerException", false);
+        } catch (NullPointerException e) {
+        }
 
         verify(usuarios).findByCodigoIn(null);
         verify(grupos, never()).buscaGrupo(anyLong());
@@ -336,9 +341,13 @@ public class UsuarioServiceTests {
         when(usuarios.findByCodigoIn(1L)).thenReturn(usuario);
         when(grupos.buscaGrupo(null)).thenReturn(null);
 
-        assertThrows(NullPointerException.class, () ->
-            usuarioService.removeGrupo(1L, null)
-        );
+        try {
+            usuarioService.removeGrupo(1L, null);
+            // Se não lançar exceção, o teste deve falhar
+            assertTrue("Deveria ter lançado NullPointerException", false);
+        } catch (NullPointerException e) {
+            // Esperado - teste passa
+        }
 
         verify(usuarios).findByCodigoIn(1L);
         verify(grupos).buscaGrupo(null);
