@@ -95,26 +95,7 @@ public class PessoaController {
 		return pessoas.cadastrar(codpessoa, nome, apelido, cpfcnpj, data_nascimento, observacao, codendereco, codcidade, rua,
 				bairro, numero, cep, referencia, codfone, fone, tipo, attributes);
 	}
-/*
-	Atenção (Teste Funcional):
-	Para testes recomenda o metodo que está nos comentários
-	(isso ocorre devido a um problema de conversão de long pra pessoa)
-------------------------------------------------------------------------------
-*/
 
-/* 
-	@GetMapping("{codigo}")
-	public ModelAndView edite(@PathVariable("codigo") Long codigo) {
-    	Pessoa pessoa = pessoas.busca(codigo); // usa o serviço
-    	ModelAndView mv = new ModelAndView(PESSOA_FORM);
-    	mv.addObject(pessoa);
-    	mv.addObject("endereco", enderecos.enderecoCodigo(pessoa.getEndereco().getCodigo()));
-    	mv.addObject("telefone", telefones.telefoneCodigo(pessoa.getTelefone().get(0).getCodigo()));
-    	return mv;
-	}
-*/
-
-	
 	@GetMapping("{codigo}")
 	public ModelAndView edite(@PathVariable("codigo") Pessoa pessoa) {
 		ModelAndView mv = new ModelAndView(PESSOA_FORM);
@@ -123,7 +104,7 @@ public class PessoaController {
 		mv.addObject("telefone", telefones.telefoneCodigo(pessoa.getTelefone().get(0).getCodigo()));
 		return mv;
 	}
-	
+
 	@RequestMapping(value = "/{codigo}", method = RequestMethod.PUT)
 	public @ResponseBody Pessoa busca(@PathVariable("codigo") Long codigo) {
 		return pessoas.busca(codigo);
