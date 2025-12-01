@@ -3,12 +3,14 @@
 Este é o repositório do projeto usado para aplicação do trabalho prático da disciplina de Qualidade e Teste. Neste README estarão os links para os principais artefatos gerados para o projeto.
 
 ## 1º Entrega:
-- [Plano de Testes do Projeto](https://docs.google.com/document/d/1fgIgzIyryhDrJuJulroLd96kp2agQrKBn5fH6Bf8enM/edit?usp=sharing)
+- [Plano de Testes do Projeto (Parcial)](https://docs.google.com/document/d/1fgIgzIyryhDrJuJulroLd96kp2agQrKBn5fH6Bf8enM/edit?usp=sharing)
 - [Resultados de exeução Testlink](https://drive.google.com/file/d/1xL7c7EXfT_h2VUo2k71meyN4QeeUlOUC/view?usp=sharing)
 - [Slides de Apresentação do Projeto](https://www.canva.com/design/DAG0_Owvf5Y/Pfw2zR69lIXSj69j5vAEbQ/edit?utm_content=DAG0_Owvf5Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## 2º Entrega:
+- [Plano de Testes do Projeto (Final)](https://docs.google.com/document/d/1qdnpXWp8VUqscI4Ae_ZGLOTABEOiFzmzrknTNNNmiQo/edit?usp=sharing)
 - [Relatório de Inspeção Código-Fonte](https://docs.google.com/document/d/1U_yCkVsSMighyUco4tB9qBAWf4rPHTTW1YjrpALwN5s/edit?usp=sharing)
+- [Slides de Apresentação do Projeto]()
 
 ## Grupo - E.R.R.O.K:
 - Elvis Souza
