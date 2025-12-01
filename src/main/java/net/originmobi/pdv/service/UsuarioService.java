@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import net.originmobi.pdv.model.GrupoUsuario;
@@ -32,8 +32,9 @@ public class UsuarioService {
 		usuario.setData_cadastro(Date.valueOf(dataAtual));
 		String mensagem = "";
 		
-		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		usuario.setSenha(encoder.encode(usuario.getSenha()));
+		//BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		//REMOVI A CRIPTOGRAFIA PARA VERIFICAR SE A SENHA MUDAVA
+		//usuario.setSenha(encoder.encode(usuario.getSenha()));
 		
 		if (usuario.getCodigo() == null) {
 
