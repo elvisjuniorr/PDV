@@ -21,7 +21,7 @@ public class PessoasTest extends BaseTest {
         // 3. Preencher dados da pessoa
         driver.findElement(By.id("nome")).sendKeys("Pessoa Selenium");
         driver.findElement(By.id("apelido")).sendKeys("Teste");
-        driver.findElement(By.id("cpfcnpj")).sendKeys("12345678917"); // Alterar CPF para um que ainda não foi cadastrado
+        driver.findElement(By.id("cpfcnpj")).sendKeys("12345678919"); // Alterar CPF para um que ainda não foi cadastrado
         driver.findElement(By.id("nascimento")).sendKeys("2000/01/01");
 
         // 4. Preencher observação
