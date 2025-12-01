@@ -7,6 +7,16 @@ Este é o repositório do projeto usado para aplicação do trabalho prático da
 - [Resultados de exeução Testlink](https://drive.google.com/file/d/1xL7c7EXfT_h2VUo2k71meyN4QeeUlOUC/view?usp=sharing)
 - [Slides de Apresentação do Projeto](https://www.canva.com/design/DAG0_Owvf5Y/Pfw2zR69lIXSj69j5vAEbQ/edit?utm_content=DAG0_Owvf5Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
+## 2º Entrega:
+- [Relatório de Inspeção Código-Fonte](https://docs.google.com/document/d/1U_yCkVsSMighyUco4tB9qBAWf4rPHTTW1YjrpALwN5s/edit?usp=sharing)
+
+## Grupo - E.R.R.O.K:
+- Elvis Souza
+- Kenji Odate
+- Oliver Almeida
+- Rachel Barino
+- Rafael Roza
+
 # PDV
 Sistema de ERP web desenvolvido em Java com Spring Framework 
 
