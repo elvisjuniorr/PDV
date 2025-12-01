@@ -1,14 +1,20 @@
 package net.originmobi.pdv.singleton;
 
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Aplicacao {
 
 	private static Aplicacao aplicacao;
 	private String usuarioAtual;
 
 	public Aplicacao() {
-		usuarioAtual = SecurityContextHolder.getContext().getAuthentication().getName();
+		if (SecurityContextHolder.getContext().getAuthentication() != null) {
+            usuarioAtual = SecurityContextHolder.getContext().getAuthentication().getName();
+        } else {
+            usuarioAtual = "Sistema"; 
+        }
 	}
 
 	public static synchronized Aplicacao getInstancia() {
